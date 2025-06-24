@@ -4,6 +4,7 @@
   border: 0;
   box-sizing: border-box;
   /* overflow-x: hidden; */
+  /* border: thin solid red; */
 }
 
 :root {
@@ -396,6 +397,7 @@ video {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* border: thin solid red; */
 }
 .nidctn {
   width: 100%;
@@ -754,7 +756,7 @@ nav ul {
     width: 80%;
     gap: 30px;
   }
-  
+
   .study h1 {
     font-size: 30px;
   }
@@ -766,6 +768,12 @@ nav ul {
     width: 80%;
   }
   .nid-main {
+    width: 100%;
+  }
+  .nidctn {
+    width: 100%;
+  }
+  .nidct {
     width: 90%;
   }
   .iframe-1 {
@@ -781,7 +789,7 @@ nav ul {
   }
   .adm-main {
     display: block;
-    width: 80%;
+    width: 70%;
   }
   .ch-main {
     display: flex;
@@ -895,6 +903,9 @@ nav ul {
     font-size: 25px;
     margin-bottom: 25px;
   }
+  .nidct {
+    width: 95%;
+  }
   .begin button {
     font-size: 15px;
     padding: 15px;
@@ -982,6 +993,9 @@ nav ul {
   }
   .ft-container h2 {
     font-size: 20px;
+  }
+  .nidct {
+    width: 100%;
   }
 }
 @media (max-width: 320px) {
