@@ -1,0 +1,999 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+:root {
+  --lightblue: #081f89;
+  --deepblue: #030b5e;
+  --white: white;
+  --background-color: #ffffff;
+  --greywhite: #f5f5f5;
+  --headerhover: #2ea3f2;
+  --textlightblack: #666;
+}
+body {
+  /* position: relative; */
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 65px;
+}
+header {
+  margin: auto;
+  display: flex;
+  width: 60%;
+  /* gap: 400px; */
+  justify-content: space-between;
+  border: thin solid var(--fontcolor);
+
+  /* width: 1080px; */
+  align-items: center;
+  /* position: fixed;
+  z-index: 2;
+  top: 0;
+  background-color: var(--white); */
+}
+.logo img {
+  margin: auto;
+  height: 80px;
+  width: 80px;
+}
+nav {
+  display: flex;
+}
+.d-arrow {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.d-arrow:hover {
+  color: var(--headerhover);
+}
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  list-style: none;
+}
+nav a {
+  color: var(--deepblue);
+  /* font-size: 16px; */
+  font-weight: 700;
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--headerhover);
+}
+
+.menu {
+  visibility: hidden;
+  /* display: none; */
+}
+
+.background {
+  height: 520px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(180deg, #0c1f38, #0f1a29d8),
+    url(./Multimedia/SQI-CLASS-SHOT.jpg);
+
+  align-content: baseline;
+}
+video {
+  width: 100%;
+  z-index: -1;
+}
+
+.he {
+  width: 60%;
+  margin: auto;
+  /* border: thin solid white; */
+  display: flex;
+  justify-content: right;
+  margin-top: 90px;
+}
+.hero {
+  /* border: thin solid white; */
+  text-align: end;
+  /* margin: ; */
+  width: 700px;
+  height: 280px;
+  color: var(--white);
+  /* align-self: end; */
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  /* align-self: right; */
+}
+.hero p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.tbtn {
+  /* width: 200px; */
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  width: 135px;
+  transition: width 200ms ease-in-out;
+  cursor: pointer;
+  font-size: 17px;
+  position: relative;
+}
+
+.tbtn::after {
+  content: "";
+  position: absolute;
+  /* border: thin solid red; */
+  background-image: url(./Multimedia/rightarrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  /* right: 40px; */
+  right: 10px;
+  bottom: 0;
+  transform: translateX(-15px);
+  visibility: hidden;
+  transition: all 200ms ease-out;
+}
+
+.tbtn:hover::after {
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  right: 10px;
+  visibility: visible;
+  transform: translateX(0px);
+}
+.tbtn:hover {
+  width: 145px;
+}
+
+.earn {
+  margin: 50px auto;
+  width: 60%;
+}
+
+.earn h2 {
+  font-size: 55px;
+  font-weight: 700;
+  color: var(--deepblue);
+}
+
+.line {
+  width: 100%;
+  border: thin solid black;
+}
+.earn-txt {
+  margin-top: 20px;
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.earn p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.earn-1 {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.adm-btn {
+  padding: 20px;
+  background-color: var(--lightblue);
+  width: 220px;
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.grad img {
+  width: 100%;
+  height: 380px;
+}
+
+.programmes {
+  display: grid;
+  grid-template-areas:
+    "prog prog"
+    "courses courses"
+    "students students"
+    "container-1 container-2";
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 10vh 5vh 10vh 30vh; */
+  width: 60%;
+  margin: 50px auto;
+  gap: 30px;
+}
+.programmes p {
+  width: 90%;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.programmes h1 {
+  font-size: 50px;
+}
+.prog {
+  grid-area: prog;
+  /* border: thin solid red; */
+}
+.courses {
+  grid-area: courses;
+  /* border: thin solid red; */
+}
+.students {
+  grid-area: students;
+  /* border: thin solid red; */
+}
+
+.container-1 {
+  grid-area: container-1;
+  /* border: thin solid red; */
+  width: 1fr;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 80px -10px rgba(44, 54, 92, 0.2);
+}
+.container-2 {
+  grid-area: container-2;
+  /* border: thin solid red; */
+  width: 1fr;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 80px -10px rgba(44, 54, 92, 0.2);
+}
+.container-1 img {
+  padding-bottom: 30px;
+  width: 100%;
+}
+.container-2 img {
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.study {
+  display: grid;
+  grid-template-areas:
+    "why why why"
+    "advan advan advan"
+    "facilities acquire job"
+    "conducive learn practical";
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 10vh 5vh 10vh 30vh; */
+  width: 60%;
+  margin: 50px auto;
+  gap: 30px;
+}
+.study p {
+  /* line-height: 1.5; */
+  font-size: 18px;
+}
+
+.why {
+  grid-area: why;
+  /* border: thin solid red; */
+  text-transform: uppercase;
+}
+
+.advan {
+  grid-area: advan;
+  /* border: thin solid red; */
+}
+
+.facilities {
+  grid-area: facilities;
+  /* border: thin solid red; */
+  padding-right: 20px;
+  line-height: 1.5;
+}
+.acquire {
+  grid-area: acquire;
+  /* border: thin solid red; */
+  padding-right: 30px;
+  line-height: 1.5;
+}
+.job {
+  grid-area: job;
+  /* border: thin solid red; */
+  padding-right: 20px;
+  line-height: 1.5;
+}
+.conducive {
+  grid-area: conducive;
+  /* border: thin solid red; */
+  padding-right: 20px;
+  line-height: 1.5;
+}
+.learn {
+  grid-area: learn;
+  /* border: thin solid red; */
+  line-height: 1.5;
+}
+.practical {
+  grid-area: practical;
+  /* border: thin solid red; */
+  line-height: 1.5;
+}
+
+.begin {
+  height: 500px;
+  width: 100%;
+  background-image: linear-gradient(
+      180deg,
+      rgba(30, 49, 117, 0.5) 0%,
+      #000033 100%
+    ),
+    url(https://edu.sqi.ng/wp-content/uploads/2023/03/financial-technology-31c-1-scaled.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 50px; */
+}
+.begin-txt {
+  align-self: center;
+  width: 60%;
+  text-align: center;
+  /* border: thin solid red; */
+}
+.begin-txt h2 {
+  font-size: 55px;
+  margin-bottom: 40px;
+}
+.blue-btn {
+  padding: 20px;
+  margin: 0 30px 30px 0;
+  border-radius: 25px;
+  background-color: var(--lightblue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+}
+.freq {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+}
+.freq h1 {
+  font-size: 50px;
+}
+.nid {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  /* border: thin solid red; */
+  margin: auto;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.nid-main {
+  width: 50%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nidctn {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  /* border: thin solid red; */
+  /* border: 1px solid #d9d9d9 */
+}
+.iframe-1 {
+  margin-top: 100px;
+}
+.iframe-1 {
+  margin-top: 50px;
+}
+.nidct h3 {
+  color: var(--lightblue);
+  font-size: 25px;
+  padding: 20px 0 20px 0;
+}
+.nidct p {
+  font-size: 21px;
+  padding: 0px 0 30px 0;
+}
+
+.admission {
+  height: 600px;
+  width: 100%;
+  background-image: linear-gradient(
+      150deg,
+      #06002d 26%,
+      rgba(38, 46, 53, 0) 100%
+    ),
+    url(https://edu.sqi.ng/wp-content/uploads/2023/03/gradient-bg-03.jpg);
+  align-items: center;
+  display: flex;
+
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+.adm-main {
+  width: 60%;
+  /* border: thin solid red; */
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  /* gap: 200px; */
+}
+.adm-txt h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.adm-txt p {
+  font-size: 20px;
+  width: 85%;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.adm-txt {
+  color: white;
+  text-align: left;
+}
+.admission button {
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.adm-ch {
+  background-color: var(--white);
+  height: 30%;
+  width: 94%;
+  /* border: thin solid red; */
+  align-self: flex-start;
+}
+.ch-main {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 70px 0 70px 0;
+}
+.ch-txt {
+  width: 30%;
+  display: flex;
+  gap: 20px;
+}
+.courses-sec {
+  background-color: var(--greywhite);
+  /* height: 800px; */
+  width: 100%;
+}
+.our-courses {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.our-courses h1 {
+  margin: 60px 0 60px 0;
+  color: var(--deepblue);
+  font-size: 50px;
+  text-align: center;
+}
+.our-corses-main {
+  display: flex;
+  justify-content: space-between;
+}
+.our-courses button {
+  display: block;
+  justify-self: center;
+}
+
+.co-cont {
+  width: 29%;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 10px 30px 10px;
+  background-color: var(--greywhite);
+  margin-bottom: 70px;
+}
+.co-cont p {
+  line-height: 1.5;
+  color: var(--textlightblack);
+  font-size: 16px;
+  text-align: justify;
+}
+.co-cont h3 {
+  text-align: center;
+  color: var(--lightblue);
+}
+.co-cont img {
+  width: 100%;
+  height: 158px;
+}
+
+/* latest news */
+.latest-news {
+  /* background-color: rgba(0, 20, 249, 0.06) */
+}
+
+.back-lt {
+  background-color: rgba(0, 20, 249, 0.06);
+  width: 100%;
+  height: 850px;
+  /* margin-top: -70px; */
+}
+.lt-main {
+  margin: auto;
+  width: 60%;
+  padding-top: 5px;
+}
+.lt-main h1 {
+  font-size: 50px;
+}
+.blue-btn.lt {
+  margin: 0;
+}
+.lt-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0 40px 0;
+}
+.latest-news {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  /* margin: 20px auto; */
+  /* flex-wrap: wrap; */
+}
+.lt-cont {
+  width: 30%;
+  background-color: white;
+  box-shadow: 1px 1px 10px black;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.lt-cont img {
+  width: 100%;
+}
+
+.lt-text {
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.lt-text :nth-child(2) {
+  color: #f7827e;
+}
+.lt-text p {
+  line-height: 1.5;
+}
+
+.ft {
+  width: 60%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ft-container {
+  line-height: 1.5;
+  width: 170px;
+}
+.ft-container h1 {
+  font-size: 22px;
+  color: #00208a;
+}
+.ft-container h2 {
+  font-size: 18px;
+}
+.ft-container.four {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ft-container.five {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ft-container img {
+  width: 170px;
+}
+
+/* screen 1 */
+@media (max-width: 1400px) {
+  header {
+    width: 70%;
+  }
+  .he {
+    width: 70%;
+  }
+  .earn {
+    width: 70%;
+  }
+  .programmes {
+    width: 70%;
+  }
+  .study {
+    width: 70%;
+  }
+  .nid {
+    width: 70%;
+  }
+  .adm-main {
+    width: 70%;
+  }
+  .our-courses {
+    width: 70%;
+  }
+  .lt-main {
+    width: 70%;
+  }
+  .ft {
+    width: 70%;
+  }
+}
+
+/* screen 2 */
+@media (max-width: 1100px) {
+  header {
+    width: 80%;
+  }
+  .he {
+    width: 80%;
+  }
+  .earn {
+    width: 80%;
+  }
+  .programmes {
+    width: 80%;
+  }
+  .study {
+    width: 80%;
+  }
+  .nid {
+    width: 80%;
+  }
+  .adm-main {
+    width: 80%;
+  }
+  .ch-txt {
+    width: 80%;
+  }
+  .our-courses {
+    width: 80%;
+  }
+  .lt-main {
+    width: 80%;
+  }
+  .ft {
+    width: 80%;
+  }
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+/* screen 3 ....... braaking point */
+@media (max-width: 980px) {
+  header {
+    width: 80%;
+  }
+  .earn {
+    width: 80%;
+  }
+
+  .he {
+    width: 80%;
+  }
+  nav ul {
+    display: none;
+  }
+  .menu {
+    visibility: visible;
+  }
+  .earn-1 {
+    display: block;
+    gap: 20px;
+  }
+  .earn-txt {
+    width: 100%;
+  }
+  .earn p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .earn h2 {
+    font-size: 30px;
+  }
+  .grad img {
+    width: 100%;
+    height: 100%;
+  }
+  .adm-btn {
+    font-size: 14px;
+    /* width: ; */
+  }
+  .programmes {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+  }
+  .study {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+  }
+  
+  .study h1 {
+    font-size: 30px;
+  }
+  .begin-txt h2 {
+    font-size: 30px;
+  }
+  .nid {
+    display: block;
+    width: 80%;
+  }
+  .nid-main {
+    width: 90%;
+  }
+  .iframe-1 {
+    height: 390px;
+    width: 110%;
+  }
+  .iframe-2 {
+    height: 390px;
+    width: 110%;
+  }
+  .freq h1 {
+    font-size: 30px;
+  }
+  .adm-main {
+    display: block;
+    width: 80%;
+  }
+  .ch-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .adm-ch {
+    width: 100%;
+    height: 45%;
+  }
+  .ch-txt {
+    width: 80%;
+    margin: auto;
+  }
+
+  .admission button {
+    padding: 10px;
+  }
+  .adm-txt h2 {
+    font-size: 30px;
+  }
+  .adm-txt p {
+    font-size: 18px;
+  }
+  .adm-txt {
+    width: 120%;
+    /* border: thin solid red; */
+  }
+  .our-corses-main {
+    display: block;
+  }
+  .co-cont {
+    /* width: 70%; */
+    display: flex;
+    flex-direction: column;
+
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+  }
+  .co-cont img {
+    align-self: center;
+    width: 80%;
+    height: 300px;
+  }
+  .co-cont p {
+    width: 80%;
+    align-self: center;
+    font-size: 20px;
+  }
+  .co-cont h3 {
+    font-size: 25px;
+  }
+  .courses-sec {
+    /* height: 2100px; */
+  }
+  .our-courses h1 {
+    font-size: 45px;
+  }
+  .latest-news {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .lt-cont {
+    width: 45%;
+  }
+  .back-lt {
+    width: 100%;
+    height: 1350px;
+  }
+  .ft {
+    width: 80%;
+  }
+}
+
+/* .begin-txt h2{
+  font-size: 30px;
+} */
+
+/* tablet */
+@media (max-width: 768px) {
+  header {
+    width: 80%;
+  }
+  .he {
+    margin-top: 150px;
+    width: 80%;
+  }
+  .background {
+    background-image: linear-gradient(
+        180deg,
+        rgba(150, 105, 97, 0.67) 0%,
+        rgba(2, 0, 76, 0.84) 100%
+      ),
+      url(./Multimedia/SQI-CLASS-SHOT.jpg);
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+  .hero p {
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+  }
+  .earn {
+    width: 80%;
+  }
+  .begin-txt {
+    width: 80%;
+  }
+  .begin-txt h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  .begin button {
+    font-size: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .adm-ch {
+    /* width: 100%; */
+    height: 50%;
+  }
+
+  .iframe-1 {
+    height: 300px;
+    width: 105%;
+  }
+  .iframe-2 {
+    height: 300px;
+    width: 105%;
+  }
+
+  .latest-news {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    justify-self: center;
+  }
+  .lt-cont {
+    width: 100%;
+  }
+  .lt-top {
+    display: block;
+  }
+  .lt-top h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .back-lt {
+    width: 100%;
+    height: 2150px;
+  }
+  .ft {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 40px;
+  }
+}
+/* mobile */
+@media (max-width: 425px) {
+  header {
+    width: 80%;
+  }
+  .freq h1 {
+    font-size: 25px;
+  }
+  .iframe-1 {
+    height: 300px;
+    width: 100%;
+  }
+  .iframe-2 {
+    height: 300px;
+    width: 100%;
+  }
+  .co-cont p {
+    width: 80%;
+    align-self: center;
+    font-size: 16px;
+  }
+  .co-cont h3 {
+    font-size: 20px;
+  }
+  .our-courses h1 {
+    font-size: 30px;
+  }
+  .co-cont p {
+    text-align: left;
+  }
+  .ft-container {
+    line-height: 1.5;
+    width: 380px;
+    /* border: thin solid red; */
+  }
+  .ft-container h1 {
+    font-size: 25px;
+    color: #00208a;
+  }
+  .ft-container h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px) {
+  header {
+    width: 80%;
+  }
+  .iframe-1 {
+    height: 250px;
+    width: 100%;
+  }
+  .iframe-2 {
+    height: 250px;
+    width: 100%;
+  }
+}
